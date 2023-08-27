@@ -6,7 +6,7 @@ model = joblib.load('anomaly_test.pkl')
 
 # Add custom CSS for background image
 # Set background image using HTML
- st.markdown(
+st.markdown(
         """
         <style>
         .reportview-container {

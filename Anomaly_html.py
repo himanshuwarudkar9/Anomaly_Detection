@@ -5,19 +5,20 @@ import joblib
 model = joblib.load('anomaly_test.pkl')
 
 # Add custom CSS for background image
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('https://ff12.fastforwardlabs.com/figures/iso.png'); 
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
+# Set background image using HTML
+ st.markdown(
+        """
+        <style>
+        .reportview-container {
+            background: url('https://ff12.fastforwardlabs.com/figures/iso.png') no-repeat center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 # Create the Streamlit app
 st.title('Web Application Log Anomaly Detection')
 
@@ -29,7 +30,7 @@ user_agent = st.text_input('User Agent:')
 protocol = st.text_input('Protocol:')
 http_status_code = st.text_input('HTTP Status Code:')
 response_size = st.number_input('Size of Response in Bytes:')
-date = st.text_input('Date (YYYY-MM-DD):')
+date = st.date_input('Date:')
 hour = st.number_input('Hour:')
 minute = st.number_input('Minute:')
 seconds = st.number_input('Seconds:')

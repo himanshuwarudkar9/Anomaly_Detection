@@ -10,7 +10,7 @@ st.markdown(
         """
         <style>
         .reportview-container {
-            background: url('https://ff12.fastforwardlabs.com/figures/iso.png') no-repeat center center fixed;
+            background: url('https://res.infoq.com/articles/anomaly-detection-ml-net/en/headerimage/Anomaly-detection-+using-ML-NET-header-image-1635501624459.jpg') no-repeat center center fixed;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
